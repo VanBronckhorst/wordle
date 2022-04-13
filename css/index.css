@@ -1,0 +1,98 @@
+:root {
+    --green: #6aaa64;
+    --darkendGreen: #538d4e;
+    --yellow: #c9b458;
+    --darkendYellow: #b59f3b;
+    --lightGray: #d8d8d8;
+    --gray: #86888a;
+    --darkGray: #939598;
+}
+
+html {
+    height: 100%;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#wordle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.pll-wordle-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pll-wordle-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.pll-wordle-cell {
+    height:48px; 
+    width:48px; 
+    border: 1px solid grey; 
+    margin:2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pll-wordle-cell-text {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pll-wordle-cell-match {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.pll-wordle-cell-no-match {
+    background-color: var(--gray);
+    border-color: var(--gray);
+}
+
+.pll-wordle-cell-wrong-place {
+    background-color:var(--yellow);
+    border-color:var(--yellow);
+}
+
+.pll-shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: 3;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
